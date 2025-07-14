@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "../src/styles/portfolio.css"
-import Navigation from './components/Navigation';
-import HeroSection from './components/HeroSection';
-import ExperienceSection from './components/ExperienceSection';
-import SkillsSection from './components/SkillsSection';
-import ProjectsSection from './components/ProjectsSection';
-import AboutSection from './components/AboutSection';
-import Footer from './components/Footer';
+import Navigation from './components/Navigation.jsx';
+import HeroSection from './components/HeroSection.jsx';
+import ExperienceSection from './components/ExperienceSection.jsx';
+import SkillsSection from './components/SkillsSection.jsx';
+import ProjectsSection from './components/ProjectsSection.jsx';
+import AboutSection from './components/AboutSection.jsx';
+import Footer from './components/Footer.jsx';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
