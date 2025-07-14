@@ -249,7 +249,32 @@ const Portfolio = () => {
       </section>
 
      
-
+ {/* About Section */}
+      <section id="about" className="py-20 px-5">
+        <div className="text-center mb-16">
+          <h2 className={`text-4xl font-bold flex items-center justify-center gap-4`}>
+            <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
+            EXPERIENCE
+            <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
+          </h2>
+        </div>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          
+          <div className="flex-1 text-2xl leading-relaxed">
+            <p>
+              Hi, I'm Ezekiel B. Pilar! I'm an Information Technology Fresh Graduate with a passion for web development and photography. I love the process of building websites—from writing clean, functional code to designing user-friendly interfaces. Seeing an idea come to life on the screen is something that excites me.
+            </p>
+            <br />
+            <p>
+              Aside from coding, I have a creative side that comes out through photography. Capturing moments, playing with lighting, and telling stories through images is something I truly enjoy. Whether it's behind a camera or in front of a screen, I love creating and bringing ideas to life.
+            </p>
+            <br />
+            <p>
+              I'm always eager to learn, improve my skills, and explore new opportunities in both web development and photography.
+            </p>
+          </div>
+        </div>
+      </section>
 {/* Skills Section */}
 <section id="skills" className="py-10 px-20">
   <div className="text-center mb-16">
