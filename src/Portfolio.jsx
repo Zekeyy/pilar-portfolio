@@ -488,7 +488,7 @@ const Portfolio = () => {
         
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <img 
-            src={`${import.meta.env.BASE_URL}images/profile2.png`}
+            src={`${import.meta.env.BASE_URL}images/profile3.png`}
             alt="Profile"
             className="w-70 h-70 rounded-full object-cover border-4 border-white shadow-2xl"
           />
