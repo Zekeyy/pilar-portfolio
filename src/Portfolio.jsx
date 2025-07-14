@@ -377,7 +377,7 @@ const Portfolio = () => {
           
         <div className="flex justify-center space-x-6 pt-6">
   {[
-    { icon: `${import.meta.env.BASE_URL}images/gitbhub.png`, link: 'https://github.com/Zekeyy' },
+    { icon: `${import.meta.env.BASE_URL}images/github.png`, link: 'https://github.com/Zekeyy' },
     { icon: `${import.meta.env.BASE_URL}images/facebook.png`, link: 'https://www.facebook.com/ezekiel.pilar.1/' },
     { icon: `${import.meta.env.BASE_URL}images/linkedin.png`, link: 'https://www.linkedin.com/in/ezekiel-pilar-6880062ba/' },
   ].map((social, index) => (
