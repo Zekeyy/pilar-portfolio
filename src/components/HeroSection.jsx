@@ -44,7 +44,7 @@ const HeroSection = ({ isDarkMode }) => {
         </div>
         
         <div className="space-y-4">
-          <h1 className="text-7xl md:text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl font-bold">
             Hey I'm <span className={`drop-shadow-lg ${
                 isDarkMode 
                   ? 'text-cyan-500' 
@@ -52,7 +52,7 @@ const HeroSection = ({ isDarkMode }) => {
               }`}>Ezekiel B. Pilar</span>
           </h1>
           
-          <div className="text-5xl md:text-6xl font-semibold">
+          <div className="text-3xl md:text-6xl font-semibold">
             I'm a <span className={`drop-shadow-lg ${
                 isDarkMode 
                   ? 'text-cyan-500' 
