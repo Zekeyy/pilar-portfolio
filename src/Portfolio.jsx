@@ -271,21 +271,12 @@ const Portfolio = () => {
       </div>
       
       <div className={`space-y-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-        <p>
+         <p>
           Currently working as a Web Developer at GammCare Medical Services Inc., where I develop 
-          and maintain web applications that serve the healthcare industry with modern, efficient solutions.
+          web applications for the healthcare industry. I've built two main projects: a finance monitoring 
+          system to track financial data and an inventory management system for efficient stock control.
         </p>
         
-        <p>
-          Aside from coding, I have a creative side that comes out through photography. Capturing moments, 
-          playing with lighting, and telling stories through images is something I truly enjoy. Whether it's 
-          behind a camera or in front of a screen, I love creating and bringing ideas to life.
-        </p>
-        
-        <p>
-          I'm always eager to learn, improve my skills, and explore new opportunities in both web 
-          development and photography.
-        </p>
       </div>
     </div>
   </div>
