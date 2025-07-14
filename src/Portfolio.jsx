@@ -207,7 +207,7 @@ const Portfolio = () => {
         <div className="text-center space-y-8">
           <div className="mb-8">
             <img 
-              src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+              src={`${import.meta.env.BASE_URL}images/profile2.png`}
               alt="Profile" 
               className="w-70 h-70 rounded-full object-cover mx-auto border-4 border-white shadow-2xl"
             />
@@ -383,7 +383,7 @@ const Portfolio = () => {
         
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <img 
-            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+            src={`${import.meta.env.BASE_URL}images/profile2.png`}
             alt="Profile"
             className="w-70 h-70 rounded-full object-cover border-4 border-white shadow-2xl"
           />
