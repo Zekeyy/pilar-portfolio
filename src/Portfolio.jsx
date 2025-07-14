@@ -38,7 +38,7 @@ const Portfolio = () => {
 
     return () => clearTimeout(timer);
   }, [currentIndex, isDeleting]);
-  
+
   useEffect(() => {
   const timer = setInterval(() => {
     setCurrentExperience((prev) => (prev === 1 ? 0 : prev + 1));
@@ -300,14 +300,9 @@ const Portfolio = () => {
                   <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
                     Key Technologies
                   </h4>
-                  <p className="text-lg">React, Node.js, MongoDB, Express.js</p>
+                  <p className="text-lg">React, Laravel, & MySQL</p>
                 </div>
-                <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-                  <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-                    Achievements
-                  </h4>
-                  <p className="text-lg">Improved inventory tracking efficiency by 40%</p>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -342,12 +337,7 @@ const Portfolio = () => {
                   </h4>
                   <p className="text-lg">Vue.js, TypeScript, Tailwind CSS, Firebase</p>
                 </div>
-                <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-                  <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
-                    Achievements
-                  </h4>
-                  <p className="text-lg">Reduced page load time by 60% through optimization</p>
-                </div>
+                
               </div>
             </div>
           </div>
