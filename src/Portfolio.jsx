@@ -490,7 +490,7 @@ const Portfolio = () => {
           <img 
             src={`${import.meta.env.BASE_URL}images/profile3.jpg`}
             alt="Profile"
-            className="w-70 h-70 rounded-full object-cover border-4 border-white shadow-2xl"
+            className="w-70 h-70  object-cover border-4 border-white shadow-2xl"
           />
           
           <div className="flex-1 text-2xl leading-relaxed">
