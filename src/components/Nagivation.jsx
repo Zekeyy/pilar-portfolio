@@ -14,7 +14,7 @@ const Navigation = ({
     : 'bg-white/20';
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 text-2xl ${
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 text-xl ${
       isScrolled ? `${headerBgClasses} backdrop-blur-sm` : 'bg-transparent'
     } ${hideHeader ? '-translate-y-full' : 'translate-y-0'}`}>
       <div className="max-w-9xl mx-auto px-5 py-4">
