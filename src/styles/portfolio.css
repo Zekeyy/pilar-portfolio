@@ -1,0 +1,52 @@
+ @import "tailwindcss";
+
+ @keyframes scroll {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(0%); }
+        }
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+        /* Replace your existing animate-scroll animation with this: */
+
+.animate-scroll-with-pause {
+  animation: scrollWithPause 15s linear infinite;
+}
+
+@keyframes scrollWithPause {
+  0% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  85% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Alternative version with longer pause */
+.animate-scroll-with-pause-long {
+  animation: scrollWithPauseLong 18s linear infinite;
+}
+
+@keyframes scrollWithPauseLong {
+  0% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(-50%);
+  }
+  90% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
