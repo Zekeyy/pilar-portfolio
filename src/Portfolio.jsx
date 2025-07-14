@@ -207,7 +207,7 @@ const Portfolio = () => {
         <div className="text-center space-y-8">
           <div className="mb-8">
             <img 
-              src="/src/images/profile.jpg" 
+              src="/public/images/profile.jpg" 
               alt="Profile" 
               className="w-70 h-70 rounded-full object-cover mx-auto border-4 border-white shadow-2xl"
             />
