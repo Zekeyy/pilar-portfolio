@@ -278,13 +278,13 @@ const Portfolio = () => {
           <div className="flex-1 text-2xl leading-relaxed">
             <div className="mb-6">
               <strong className={`text-3xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                GammCare Medical Services Inc.
+                GammCare Medical Services Inc. - INTERSHIP
               </strong>
               <p className={`text-xl mt-2 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`}>
                 Web Developer
               </p>
               <p className={`text-lg mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                2023 - Present
+                Febraury 20, 2025 - May 31, 2025
               </p>
             </div>
             
@@ -319,7 +319,7 @@ const Portfolio = () => {
                 Frontend Developer
               </p>
               <p className={`text-lg mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                2022 - 2023
+                2024-PRESENT
               </p>
             </div>
             
