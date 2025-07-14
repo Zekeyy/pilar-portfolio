@@ -78,11 +78,11 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: 'Python', image: './src/images/pythonLogo.jpg' },
-    { name: 'PHP', image: './src/images/phpLogo.png' },
-    { name: 'Java', image: './src/images/JavaLogo.png' },
-    { name: 'JavaScript', image: './src/images/JavaScript-logo.png' },
-    { name: 'SQL', image: './src/images/SQLLogo.png' },
+    { name: 'Python', image: `${import.meta.env.BASE_URL}images/pythonLogo.jpg` },
+    { name: 'PHP', image: `${import.meta.env.BASE_URL}images/phpLogo.png` },
+    { name: 'Java', image: `${import.meta.env.BASE_URL}images/JavaLogo.png` },
+    { name: 'JavaScript', image: `${import.meta.env.BASE_URL}images/JavaScript-logo.png` },
+    { name: 'SQL', image: `${import.meta.env.BASE_URL}images/SQLLogo.png` },
   ];
 
   const projects = [
@@ -237,7 +237,7 @@ const Portfolio = () => {
             
             <div className="pt-8">
               <a 
-                href="/src/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf" 
+                href={`${import.meta.env.BASE_URL}/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf`} 
                 download
                 className="inline-block bg-gradient-to-r from-gray-800 to-gray-600 text-white px-8 py-3 rounded-lg font-bold hover:scale-110 hover:shadow-xl transition-all duration-300"
               >
@@ -343,7 +343,7 @@ const Portfolio = () => {
         
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <img 
-            src="./src/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt="Profile"
             className="w-70 h-70 rounded-full object-cover border-4 border-white shadow-2xl"
           />
@@ -377,9 +377,9 @@ const Portfolio = () => {
           
         <div className="flex justify-center space-x-6 pt-6">
   {[
-    { icon: './src/images/github.png', link: 'https://github.com/Zekeyy' },
-    { icon: './src/images/facebook.png', link: 'https://www.facebook.com/ezekiel.pilar.1/' },
-    { icon: './src/images/linkedin.png', link: 'https://www.linkedin.com/in/ezekiel-pilar-6880062ba/' },
+    { icon: `${import.meta.env.BASE_URL}images/gitbhub.png`, link: 'https://github.com/Zekeyy' },
+    { icon: `${import.meta.env.BASE_URL}images/facebook.png`, link: 'https://www.facebook.com/ezekiel.pilar.1/' },
+    { icon: `${import.meta.env.BASE_URL}images/linkedin.png`, link: 'https://www.linkedin.com/in/ezekiel-pilar-6880062ba/' },
   ].map((social, index) => (
     <a
       key={index}
