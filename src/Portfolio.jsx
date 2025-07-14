@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../src/styles/portfolio.css"
-import Navigation from './components/Navigation.jsx';
+import Navigation from "./components/Navigation.jsx"
 import HeroSection from './components/HeroSection.jsx';
 import ExperienceSection from './components/ExperienceSection.jsx';
 import SkillsSection from './components/SkillsSection.jsx';
