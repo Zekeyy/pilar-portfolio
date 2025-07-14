@@ -21,7 +21,7 @@ const Portfolio = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 50);
       
-      const skillsSection = document.getElementById('skills');
+      const skillsSection = document.getElementById('experience');
       if (skillsSection) {
         const skillsTop = skillsSection.offsetTop;
         setShowReturnBtn(scrollY > skillsTop);
