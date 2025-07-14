@@ -249,32 +249,84 @@ const Portfolio = () => {
       </section>
 
      
- {/* About Section */}
-      <section id="about" className="py-20 px-5">
-        <div className="text-center mb-16">
-          <h2 className={`text-4xl font-bold flex items-center justify-center gap-4`}>
-            <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
-            EXPERIENCE
-            <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
-          </h2>
-        </div>
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-          
-          <div className="flex-1 text-2xl leading-relaxed">
-            <p>
-              Hi, I'm Ezekiel B. Pilar! I'm an Information Technology Fresh Graduate with a passion for web development and photography. I love the process of building websites—from writing clean, functional code to designing user-friendly interfaces. Seeing an idea come to life on the screen is something that excites me.
-            </p>
-            <br />
-            <p>
-              Aside from coding, I have a creative side that comes out through photography. Capturing moments, playing with lighting, and telling stories through images is something I truly enjoy. Whether it's behind a camera or in front of a screen, I love creating and bringing ideas to life.
-            </p>
-            <br />
-            <p>
-              I'm always eager to learn, improve my skills, and explore new opportunities in both web development and photography.
-            </p>
+ {/* Experience Section */}
+<section id="experience" className="py-24 px-5">
+  <div className="max-w-6xl mx-auto">
+    {/* Section Header */}
+    <div className="text-center mb-20">
+      <h2 className={`text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+        Experience
+      </h2>
+      <div className={`w-24 h-1 mx-auto ${isDarkMode ? 'bg-blue-400' : 'bg-blue-600'}`}></div>
+    </div>
+
+    {/* Experience Card */}
+    <div className="relative">
+      <div className={`
+        ${isDarkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'} 
+        border backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-xl hover:shadow-2xl 
+        transition-all duration-300 transform hover:-translate-y-2
+      `}>
+        
+        {/* Company & Role */}
+        <div className="mb-8">
+          <div className="flex items-center gap-4 mb-4">
+            <div className={`w-3 h-3 rounded-full ${isDarkMode ? 'bg-blue-400' : 'bg-blue-600'}`}></div>
+            <h3 className={`text-2xl lg:text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+              GammCare Medical Services Inc.
+            </h3>
           </div>
+          <p className={`text-xl font-medium ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} ml-7`}>
+            Web Developer
+          </p>
         </div>
-      </section>
+
+        {/* Experience Description */}
+        <div className={`space-y-6 text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p>
+            Currently working as a Web Developer at GammCare Medical Services Inc., where I create 
+            and maintain web applications that serve the healthcare industry with modern, 
+            user-friendly solutions.
+          </p>
+          
+          <p>
+            Beyond coding, I have a creative side that flourishes through photography. Capturing 
+            moments, experimenting with lighting, and telling compelling stories through images 
+            is something I truly passionate about. Whether I'm behind a camera or in front of 
+            a screen, I love creating and bringing innovative ideas to life.
+          </p>
+          
+          <p>
+            I'm constantly eager to learn, enhance my skills, and explore new opportunities 
+            in both web development and photography, always seeking to push the boundaries 
+            of what's possible.
+          </p>
+        </div>
+
+        {/* Skills Tags */}
+        <div className="mt-10 flex flex-wrap gap-3">
+          {['Web Development', 'Healthcare Tech', 'Photography', 'Creative Design'].map((skill, index) => (
+            <span 
+              key={index}
+              className={`
+                px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                ${isDarkMode 
+                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }
+              `}
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+
+        {/* Decorative Element */}
+        <div className="absolute -top-2 -right-2 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 opacity-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
 {/* Skills Section */}
 <section id="skills" className="py-10 px-20">
   <div className="text-center mb-16">
