@@ -86,9 +86,9 @@ const Portfolio = () => {
   ];
 
   const projects = [
-    { title: 'HRIS Project', image: './src/images/Project1.jpg', link: 'https://hris-virid-gamma.vercel.app/' },
-    { title: 'Finance Monitoring', image: './src/images/Project2.png', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
-    { title: 'Project 3', image: './src/images/Project2.jpg', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
+    { title: 'HRIS Project', image: `${import.meta.env.BASE_URL}images/Project1.jpg`, link: 'https://hris-virid-gamma.vercel.app/' },
+    { title: 'Finance Monitoring', image: `${import.meta.env.BASE_URL}images/Project2.png`, link: 'https://zekeyy.github.io/Finance-Monitoring/' },
+    { title: 'Project 3', image: `${import.meta.env.BASE_URL}images/Project1.jpg`, link: 'https://zekeyy.github.io/Finance-Monitoring/' },
   ];
 
   const themeClasses = isDarkMode 
