@@ -119,7 +119,7 @@ const ExperienceSection = ({ isDarkMode }) => {
                 <div className={`space-y-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <p>
                     Currently working as a Web Developer at GammCare Medical Services Inc., where I develop 
-                    web applications for the healthcare industry. I've built two main projects: a finance monitoring 
+                    web applications. I've built two main projects: a finance monitoring 
                     system to track financial data and an inventory management system for efficient stock control.
                   </p>
                   
@@ -140,29 +140,25 @@ const ExperienceSection = ({ isDarkMode }) => {
               <div className="flex-1 text-2xl leading-relaxed">
                 <div className="mb-6">
                   <strong className={`text-3xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                    TechSolutions Startup
+                    Freelance Photography Assistant
                   </strong>
-                  <p className={`text-xl mt-2 ${isDarkMode ? 'text-green-400' : 'text-green-600'} font-medium`}>
-                    Frontend Developer
-                  </p>
                   <p className={`text-lg mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    2023-PRESENT
+                    2 MONTHS IN 2018
                   </p>
                 </div>
                 
                 <div className={`space-y-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <p>
-                    Worked as a Frontend Developer at TechSolutions Startup, focusing on creating responsive 
-                    user interfaces and optimizing user experience. Collaborated with cross-functional teams 
-                    to deliver high-quality web applications and contributed to the company's rapid growth phase.
+                    Assisted a friend with photography projects over a 2-month period, helping with various 
+                    photo shoots and learning fundamental photography techniques. 
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                     <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
                       <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
-                        Key Technologies
+                        Key Equipment & Skills
                       </h4>
-                      <p className="text-lg">Vue.js, TypeScript, Tailwind CSS, Firebase</p>
+                      <p className="text-lg">Canon DSLR, & Photoshop</p>
                     </div>
                   </div>
                 </div>
