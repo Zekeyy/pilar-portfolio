@@ -207,7 +207,7 @@ const Portfolio = () => {
         <div className="text-center space-y-8">
           <div className="mb-8">
             <img 
-              src="./src/images/profile.jpg" 
+              src="../src/images/profile.jpg" 
               alt="Profile" 
               className="w-70 h-70 rounded-full object-cover mx-auto border-4 border-white shadow-2xl"
             />
@@ -237,13 +237,13 @@ const Portfolio = () => {
             
             <div className="pt-8">
               <a 
-                href="./src/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf" 
+                href="../src/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf" 
                 download
                 className="inline-block bg-gradient-to-r from-gray-800 to-gray-600 text-white px-8 py-3 rounded-lg font-bold hover:scale-110 hover:shadow-xl transition-all duration-300"
               >
                 Download CV
               </a>
-            </div>
+            </div>.
           </div>
         </div>
       </section>
