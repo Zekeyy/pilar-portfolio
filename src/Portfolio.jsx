@@ -10,7 +10,10 @@ const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [currentExperience, setCurrentExperience] = useState(0);
+const [currentExperience, setCurrentExperience] = useState(0);
+const [isDragging, setIsDragging] = useState(false);
+const [startX, setStartX] = useState(0);
+const [translateX, setTranslateX] = useState(0);
 
   // Fixed Typewriter effect
   useEffect(() => {
@@ -39,13 +42,7 @@ const Portfolio = () => {
     return () => clearTimeout(timer);
   }, [currentIndex, isDeleting]);
 
-  useEffect(() => {
-  const timer = setInterval(() => {
-    setCurrentExperience((prev) => (prev === 1 ? 0 : prev + 1));
-  }, 5000); // Change slide every 5 seconds
-  
-  return () => clearInterval(timer);
-}, []);
+ 
   // Scroll effects
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +61,75 @@ const Portfolio = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+const handleMouseDown = (e) => {
+  setIsDragging(true);
+  setStartX(e.clientX);
+};
 
+const handleMouseMove = (e) => {
+  if (!isDragging) return;
+  
+  const currentX = e.clientX;
+  const diff = startX - currentX;
+  setTranslateX(diff);
+};
+
+const handleMouseUp = () => {
+  if (!isDragging) return;
+  
+  setIsDragging(false);
+  
+  // If dragged more than 50px, change slide
+  if (Math.abs(translateX) > 50) {
+    if (translateX > 0 && currentExperience < 1) {
+      setCurrentExperience(currentExperience + 1);
+    } else if (translateX < 0 && currentExperience > 0) {
+      setCurrentExperience(currentExperience - 1);
+    }
+  }
+  
+  setTranslateX(0);
+};
+
+// Touch handlers
+const handleTouchStart = (e) => {
+  setIsDragging(true);
+  setStartX(e.touches[0].clientX);
+};
+
+const handleTouchMove = (e) => {
+  if (!isDragging) return;
+  
+  const currentX = e.touches[0].clientX;
+  const diff = startX - currentX;
+  setTranslateX(diff);
+};
+
+const handleTouchEnd = () => {
+  if (!isDragging) return;
+  
+  setIsDragging(false);
+  
+  // If dragged more than 50px, change slide
+  if (Math.abs(translateX) > 50) {
+    if (translateX > 0 && currentExperience < 1) {
+      setCurrentExperience(currentExperience + 1);
+    } else if (translateX < 0 && currentExperience > 0) {
+      setCurrentExperience(currentExperience - 1);
+    }
+  }
+  
+  setTranslateX(0);
+};
+
+// Optional: Auto-sliding functionality
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentExperience((prev) => (prev === 1 ? 0 : prev + 1));
+  }, 5000); // Change slide every 5 seconds
+  
+  return () => clearInterval(timer);
+}, []);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -256,7 +321,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-    {/* Experience Section */}
+  {/* Experience Section */}
 <section id="experience" className="py-20 px-5">
   <div className="text-center mb-16">
     <h2 className={`text-4xl font-bold flex items-center justify-center gap-4`}>
@@ -270,8 +335,15 @@ const Portfolio = () => {
     {/* Experience Slider Container */}
     <div className="relative overflow-hidden">
       <div 
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex transition-transform duration-500 ease-in-out cursor-grab active:cursor-grabbing"
         style={{ transform: `translateX(-${currentExperience * 100}%)` }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {/* Experience 1 */}
         <div className="w-full flex-shrink-0 flex flex-col lg:flex-row items-center gap-12">
@@ -319,7 +391,7 @@ const Portfolio = () => {
                 Frontend Developer
               </p>
               <p className={`text-lg mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                2024-PRESENT
+                2023-PRESENT
               </p>
             </div>
             
@@ -337,7 +409,7 @@ const Portfolio = () => {
                   </h4>
                   <p className="text-lg">Vue.js, TypeScript, Tailwind CSS, Firebase</p>
                 </div>
-                
+               
               </div>
             </div>
           </div>
@@ -367,31 +439,7 @@ const Portfolio = () => {
       ))}
     </div>
 
-    {/* Navigation Arrows (Optional) */}
-    <div className="flex justify-center mt-6 gap-4">
-      <button
-        onClick={() => setCurrentExperience(currentExperience === 0 ? 1 : currentExperience - 1)}
-        className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-          isDarkMode 
-            ? 'bg-gray-800 text-white hover:bg-gray-700' 
-            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-        }`}
-        aria-label="Previous experience"
-      >
-        ← Previous
-      </button>
-      <button
-        onClick={() => setCurrentExperience(currentExperience === 1 ? 0 : currentExperience + 1)}
-        className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-          isDarkMode 
-            ? 'bg-gray-800 text-white hover:bg-gray-700' 
-            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-        }`}
-        aria-label="Next experience"
-      >
-        Next →
-      </button>
-    </div>
+
   </div>
 </section>
 
