@@ -78,17 +78,17 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: 'Python', image: '/src/images/pythonLogo.jpg' },
-    { name: 'PHP', image: '/src/images/phpLogo.png' },
-    { name: 'Java', image: '/src/images/JavaLogo.png' },
-    { name: 'JavaScript', image: '/src/images/JavaScript-logo.png' },
-    { name: 'SQL', image: '/src/images/SQLLogo.png' },
+    { name: 'Python', image: './src/images/pythonLogo.jpg' },
+    { name: 'PHP', image: './src/images/phpLogo.png' },
+    { name: 'Java', image: './src/images/JavaLogo.png' },
+    { name: 'JavaScript', image: './src/images/JavaScript-logo.png' },
+    { name: 'SQL', image: './src/images/SQLLogo.png' },
   ];
 
   const projects = [
-    { title: 'HRIS Project', image: '/src/images/Project1.jpg', link: 'https://hris-virid-gamma.vercel.app/' },
-    { title: 'Finance Monitoring', image: '/src/images/Project2.png', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
-    { title: 'Project 3', image: '/src/images/Project2.jpg', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
+    { title: 'HRIS Project', image: './src/images/Project1.jpg', link: 'https://hris-virid-gamma.vercel.app/' },
+    { title: 'Finance Monitoring', image: './src/images/Project2.png', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
+    { title: 'Project 3', image: './src/images/Project2.jpg', link: 'https://zekeyy.github.io/Finance-Monitoring/' },
   ];
 
   const themeClasses = isDarkMode 
@@ -207,7 +207,7 @@ const Portfolio = () => {
         <div className="text-center space-y-8">
           <div className="mb-8">
             <img 
-              src="/src/images/profile.jpg" 
+              src="./src/images/profile.jpg" 
               alt="Profile" 
               className="w-70 h-70 rounded-full object-cover mx-auto border-4 border-white shadow-2xl"
             />
@@ -237,7 +237,7 @@ const Portfolio = () => {
             
             <div className="pt-8">
               <a 
-                href="/src/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf" 
+                href="./src/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf" 
                 download
                 className="inline-block bg-gradient-to-r from-gray-800 to-gray-600 text-white px-8 py-3 rounded-lg font-bold hover:scale-110 hover:shadow-xl transition-all duration-300"
               >
@@ -343,7 +343,7 @@ const Portfolio = () => {
         
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <img 
-            src="/src/images/profile.jpg"
+            src="./src/images/profile.jpg"
             alt="Profile"
             className="w-70 h-70 rounded-full object-cover border-4 border-white shadow-2xl"
           />
@@ -377,9 +377,9 @@ const Portfolio = () => {
           
         <div className="flex justify-center space-x-6 pt-6">
   {[
-    { icon: '/src/images/github.png', link: 'https://github.com/Zekeyy' },
-    { icon: '/src/images/facebook.png', link: 'https://www.facebook.com/ezekiel.pilar.1/' },
-    { icon: '/src/images/linkedin.png', link: 'https://www.linkedin.com/in/ezekiel-pilar-6880062ba/' },
+    { icon: './src/images/github.png', link: 'https://github.com/Zekeyy' },
+    { icon: './src/images/facebook.png', link: 'https://www.facebook.com/ezekiel.pilar.1/' },
+    { icon: './src/images/linkedin.png', link: 'https://www.linkedin.com/in/ezekiel-pilar-6880062ba/' },
   ].map((social, index) => (
     <a
       key={index}
