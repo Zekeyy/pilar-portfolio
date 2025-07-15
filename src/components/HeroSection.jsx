@@ -67,7 +67,7 @@ const HeroSection = ({ isDarkMode }) => {
           
           <div className="pt-8">
             <a 
-              href={`${import.meta.env.BASE_URL}/files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf`} 
+              href={`${import.meta.env.BASE_URL}files/PILAR_EZEKIEL_WEB_DEV_RESUME.pdf`} 
               download
               className="inline-block bg-gradient-to-r from-gray-800 to-gray-600 text-white px-8 py-3 rounded-lg font-bold hover:scale-110 hover:shadow-xl transition-all duration-300"
             >
