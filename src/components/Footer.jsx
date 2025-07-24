@@ -34,7 +34,7 @@ const Footer = ({ isDarkMode }) => {
               } hover:bg-blue-700 hover:text-white hover:scale-125 transition-all duration-300 text-xl`}
             >
               {social.icon.endsWith('.png') || social.icon.endsWith('.jpg') || social.icon.endsWith('.svg') ? (
-                <img src={social.icon} alt="icon" className="w-12 h-10" />
+                <img src={social.icon} alt="icon" className="w-8 h-10" />
               ) : (
                 social.icon
               )}
