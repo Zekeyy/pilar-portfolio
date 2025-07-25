@@ -34,7 +34,7 @@ const SkillsSection = ({ isDarkMode }) => {
               <img 
                 src={skill.image} 
                 alt={skill.name}
-                className="w-24 h-20 mr-5"
+                className="w-12 h-12 mr-5"
               />
               <p className="text-2xl font-semibold">{skill.name}</p>
             </div>
