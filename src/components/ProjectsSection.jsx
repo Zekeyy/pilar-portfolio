@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectsSection = ({ isDarkMode }) => {
   const projects = [
     { 
-      title: 'HRIS Project', 
+      title: 'HRIS with requirements checker and tag matching AI', 
       link: 'https://hris-virid-gamma.vercel.app/',
       technologies: ['React', 'Laravel', 'MySQL']
     },
@@ -12,11 +12,7 @@ const ProjectsSection = ({ isDarkMode }) => {
       link: 'https://zekeyy.github.io/Finance-Monitoring/',
       technologies: ['React', 'Laravel', 'MySQL']
     },
-    { 
-      title: 'Project 3', 
-      link: 'https://zekeyy.github.io/Finance-Monitoring/',
-      technologies: ['React', 'Laravel', 'MySQL']
-    },
+   
   ];
 
   const cardBgClasses = isDarkMode 
