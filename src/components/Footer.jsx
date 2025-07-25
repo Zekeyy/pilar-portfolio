@@ -27,7 +27,7 @@ const Footer = ({ isDarkMode }) => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-15 h-15 border-2 ${
+              className={`w-17 h-17 border-2 ${
                 isDarkMode ? 'border-white' : 'border-gray-800'
               } rounded-full flex items-center justify-center ${
                 isDarkMode ? 'text-white' : 'text-gray-800'
