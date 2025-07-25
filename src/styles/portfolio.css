@@ -1,46 +1,46 @@
 @import "tailwindcss";
 
-/* Continuous scroll animation - moves right continuously */
-@keyframes scrollContinuous {
+/* Seamless scroll animation */
+@keyframes seamlessScroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 3));
   }
 }
 
-/* Mobile (default) - Fast speed (4s) */
-.animate-scroll-mobile {
-  animation: scrollContinuous 4s linear infinite;
+.seamless-scroll {
+  width: max-content;
+  animation: seamlessScroll 20s linear infinite;
 }
 
-/* Tablet (sm and up) - Medium speed (6s) */
-@media (min-width: 640px) {
-  .animate-scroll-tablet {
-    animation: scrollContinuous 6s linear infinite;
-  }
-}
-
-/* Desktop (md and up) - Normal speed (8s) */
-@media (min-width: 768px) {
-  .animate-scroll-desktop {
-    animation: scrollContinuous 8s linear infinite;
-  }
-}
-
-/* Pause on hover for all screen sizes */
-.animate-scroll-mobile:hover,
-.animate-scroll-tablet:hover,
-.animate-scroll-desktop:hover {
+.seamless-scroll:hover {
   animation-play-state: paused;
 }
 
-/* Reduced motion for accessibility */
+/* Responsive animation speeds */
+@media (max-width: 639px) {
+  .seamless-scroll {
+    animation-duration: 15s;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .seamless-scroll {
+    animation-duration: 18s;
+  }
+}
+
+@media (min-width: 768px) {
+  .seamless-scroll {
+    animation-duration: 20s;
+  }
+}
+
+/* Accessibility: Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  .animate-scroll-mobile,
-  .animate-scroll-tablet,
-  .animate-scroll-desktop {
+  .seamless-scroll {
     animation: none;
   }
 }
