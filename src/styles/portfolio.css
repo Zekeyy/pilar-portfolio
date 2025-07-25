@@ -1,23 +1,42 @@
 @import "tailwindcss";
 
-@keyframes scroll {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0%); }
+/* Base animation for continuous scroll */
+@keyframes scrollContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
+/* Mobile (default) - Very fast speed (4s) */
+.animate-scroll-mobile {
+  animation: scrollContinuous 4s linear infinite;
 }
 
-.animate-scroll:hover {
+/* Tablet (sm and up) - Medium speed (6s) */
+@media (min-width: 640px) {
+  .animate-scroll-tablet {
+    animation: scrollContinuous 6s linear infinite;
+  }
+}
+
+/* Desktop (md and up) - Normal speed (8s) */
+@media (min-width: 768px) {
+  .animate-scroll-desktop {
+    animation: scrollContinuous 8s linear infinite;
+  }
+}
+
+/* Pause on hover for all screen sizes */
+.animate-scroll-mobile:hover,
+.animate-scroll-tablet:hover,
+.animate-scroll-desktop:hover {
   animation-play-state: paused;
 }
 
-/* FASTER VERSION - Reduce from 15s to 8s */
-.animate-scroll-with-pause {
-  animation: scrollWithPause 8s linear infinite;
-}
-
+/* Alternative: Animation with pause (if you prefer the pause effect) */
 @keyframes scrollWithPause {
   0% {
     transform: translateX(0);
@@ -33,56 +52,40 @@
   }
 }
 
-/* MEDIUM SPEED - Reduce from 18s to 12s */
-.animate-scroll-with-pause-long {
-  animation: scrollWithPauseLong 12s linear infinite;
+/* Mobile with pause - Very fast (3s) */
+.animate-scroll-mobile-pause {
+  animation: scrollWithPause 3s linear infinite;
 }
 
-@keyframes scrollWithPauseLong {
-  0% {
-    transform: translateX(0);
-  }
-  65% {
-    transform: translateX(-50%);
-  }
-  90% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-50%);
+/* Tablet with pause - Medium fast (5s) */
+@media (min-width: 640px) {
+  .animate-scroll-tablet-pause {
+    animation: scrollWithPause 5s linear infinite;
   }
 }
 
-/* EXTRA FAST VERSION - New option */
-.animate-scroll-with-pause-fast {
-  animation: scrollWithPauseFast 5s linear infinite;
-}
-
-@keyframes scrollWithPauseFast {
-  0% {
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(-50%);
-  }
-  85% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-50%);
+/* Desktop with pause - Normal (8s) */
+@media (min-width: 768px) {
+  .animate-scroll-desktop-pause {
+    animation: scrollWithPause 8s linear infinite;
   }
 }
 
-/* CONTINUOUS SCROLL (no pause) - Very fast */
-.animate-scroll-continuous {
-  animation: scrollContinuous 6s linear infinite;
+/* Extra responsive options for very small screens */
+@media (max-width: 480px) {
+  .animate-scroll-mobile {
+    animation: scrollContinuous 3s linear infinite;
+  }
 }
 
-@keyframes scrollContinuous {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-mobile,
+  .animate-scroll-tablet,
+  .animate-scroll-desktop,
+  .animate-scroll-mobile-pause,
+  .animate-scroll-tablet-pause,
+  .animate-scroll-desktop-pause {
+    animation-duration: 20s;
   }
 }

@@ -14,9 +14,9 @@ const SkillsSection = ({ isDarkMode }) => {
     : 'bg-white shadow-lg';
 
   return (
-    <section id="skills" className="py-10 px-20">
-      <div className="text-center mb-16">
-        <h2 className={`text-4xl font-bold flex items-center justify-center gap-4`}>
+    <section id="skills" className="py-10 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="text-center mb-8 md:mb-16">
+        <h2 className={`text-2xl md:text-4xl font-bold flex items-center justify-center gap-2 md:gap-4`}>
           <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
           SKILLS
           <span className={`flex-1 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-gray-800'}`}></span>
@@ -24,19 +24,19 @@ const SkillsSection = ({ isDarkMode }) => {
       </div>
       
       <div className="overflow-hidden max-w-7xl mx-auto">
-        <div className="flex animate-scroll-with-pause gap-8">
+        <div className="flex animate-scroll-mobile sm:animate-scroll-tablet md:animate-scroll-desktop gap-4 md:gap-8">
           {/* First set of skills */}
           {skills.map((skill, index) => (
             <div
               key={`first-${index}`}
-              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-600 min-w-[300px]`}
+              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-4 md:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[200px] sm:min-w-[250px] md:min-w-[300px]`}
             >
               <img 
                 src={skill.image} 
                 alt={skill.name}
-                className="w-12 h-12 mr-5"
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mr-3 md:mr-5"
               />
-              <p className="text-2xl font-semibold">{skill.name}</p>
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold">{skill.name}</p>
             </div>
           ))}
           
@@ -44,14 +44,14 @@ const SkillsSection = ({ isDarkMode }) => {
           {skills.map((skill, index) => (
             <div
               key={`second-${index}`}
-              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[300px]`}
+              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-4 md:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[200px] sm:min-w-[250px] md:min-w-[300px]`}
             >
               <img 
                 src={skill.image} 
                 alt={skill.name}
-                className="w-12 h-12 mr-5"
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mr-3 md:mr-5"
               />
-              <p className="text-xl font-semibold">{skill.name}</p>
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold">{skill.name}</p>
             </div>
           ))}
         </div>
