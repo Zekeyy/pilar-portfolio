@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
-/* Base animation for one-time scroll (no reset) */
-@keyframes scrollOnce {
+/* Continuous scroll animation - moves right continuously */
+@keyframes scrollContinuous {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-30%);
+    transform: translateX(-50%);
   }
 }
 
-/* Mobile (default) - Fast speed (6s) */
+/* Mobile (default) - Fast speed (4s) */
 .animate-scroll-mobile {
-  animation: scrollOnce 6s ease-in-out infinite alternate;
+  animation: scrollContinuous 4s linear infinite;
 }
 
-/* Tablet (sm and up) - Medium speed (8s) */
+/* Tablet (sm and up) - Medium speed (6s) */
 @media (min-width: 640px) {
   .animate-scroll-tablet {
-    animation: scrollOnce 8s ease-in-out infinite alternate;
+    animation: scrollContinuous 6s linear infinite;
   }
 }
 
-/* Desktop (md and up) - Normal speed (10s) */
+/* Desktop (md and up) - Normal speed (8s) */
 @media (min-width: 768px) {
   .animate-scroll-desktop {
-    animation: scrollOnce 10s ease-in-out infinite alternate;
+    animation: scrollContinuous 8s linear infinite;
   }
 }
 
