@@ -29,7 +29,7 @@ const SkillsSection = ({ isDarkMode }) => {
           {skills.map((skill, index) => (
             <div
               key={`first-${index}`}
-              className={`flex-shrink-0 flex items-center h-15 ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-600 min-w-[300px]`}
+              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-600 min-w-[300px]`}
             >
               <img 
                 src={skill.image} 
@@ -44,7 +44,7 @@ const SkillsSection = ({ isDarkMode }) => {
           {skills.map((skill, index) => (
             <div
               key={`second-${index}`}
-              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[400px]`}
+              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[300px]`}
             >
               <img 
                 src={skill.image} 
