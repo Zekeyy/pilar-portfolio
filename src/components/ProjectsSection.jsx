@@ -2,14 +2,34 @@ import React from 'react';
 
 const ProjectsSection = ({ isDarkMode }) => {
   const projects = [
-    { title: 'HRIS Project', image: `${import.meta.env.BASE_URL}images/Project1.jpg`, link: 'https://hris-virid-gamma.vercel.app/' },
-    { title: 'Finance Monitoring', image: `${import.meta.env.BASE_URL}images/Project2.png`, link: 'https://zekeyy.github.io/Finance-Monitoring/' },
-    { title: 'Project 3', image: `${import.meta.env.BASE_URL}images/Project1.jpg`, link: 'https://zekeyy.github.io/Finance-Monitoring/' },
+    { 
+      title: 'HRIS Project', 
+      link: 'https://hris-virid-gamma.vercel.app/',
+      technologies: ['React', 'Laravel', 'MySQL']
+    },
+    { 
+      title: 'Finance Monitoring', 
+      link: 'https://zekeyy.github.io/Finance-Monitoring/',
+      technologies: ['React', 'Laravel', 'MySQL']
+    },
+    { 
+      title: 'Project 3', 
+      link: 'https://zekeyy.github.io/Finance-Monitoring/',
+      technologies: ['React', 'Laravel', 'MySQL']
+    },
   ];
 
   const cardBgClasses = isDarkMode 
-    ? 'bg-gray-800' 
-    : 'bg-white shadow-lg';
+    ? 'bg-gray-800 hover:bg-gray-700' 
+    : 'bg-white shadow-lg hover:shadow-xl';
+
+  const textClasses = isDarkMode 
+    ? 'text-white' 
+    : 'text-gray-800';
+
+  const techBadgeClasses = isDarkMode
+    ? 'bg-blue-600 text-white'
+    : 'bg-blue-100 text-blue-800';
 
   return (
     <section id="projects" className="py-10 px-5">
@@ -21,28 +41,32 @@ const ProjectsSection = ({ isDarkMode }) => {
         </h2>
       </div>
       
-      <div className="grid grid-cols-1 h[200px] md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-8xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => (
-          <div
+          <a
             key={index}
-            className={`${cardBgClasses} rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300`}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${cardBgClasses} rounded-lg p-6 transition-all duration-300 hover:scale-105 cursor-pointer block`}
           >
-            <img 
-              src={project.image}
-              alt={project.title}
-              className="w-full h-4/5 object-cover"
-            />
-            <div className="p-4 h-1/5 flex items-center justify-center">
-              <a 
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-semibold"
-              >
-                View Website
-              </a>
+            <div className="text-center">
+              <h3 className={`text-2xl font-bold mb-4 ${textClasses}`}>
+                {project.title}
+              </h3>
+              
+              <div className="flex flex-wrap justify-center gap-2">
+                {project.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${techBadgeClasses}`}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
