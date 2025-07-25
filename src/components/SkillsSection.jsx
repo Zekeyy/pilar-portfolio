@@ -24,7 +24,7 @@ const SkillsSection = ({ isDarkMode }) => {
       </div>
       
       <div className="overflow-hidden max-w-7xl mx-auto">
-        <div className="flex gap-4 md:gap-8">
+        <div className="flex animate-scroll-mobile sm:animate-scroll-tablet md:animate-scroll-desktop gap-4 md:gap-8">
           {skills.map((skill, index) => (
             <div
               key={index}

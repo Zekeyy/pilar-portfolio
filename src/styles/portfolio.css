@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
-/* Base animation for continuous scroll */
-@keyframes scrollContinuous {
+/* Base animation for one-time scroll (no reset) */
+@keyframes scrollOnce {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
   }
 }
 
-/* Mobile (default) - Very fast speed (4s) */
+/* Mobile (default) - Fast speed (6s) */
 .animate-scroll-mobile {
-  animation: scrollContinuous 4s linear infinite;
+  animation: scrollOnce 6s ease-in-out infinite alternate;
 }
 
-/* Tablet (sm and up) - Medium speed (6s) */
+/* Tablet (sm and up) - Medium speed (8s) */
 @media (min-width: 640px) {
   .animate-scroll-tablet {
-    animation: scrollContinuous 6s linear infinite;
+    animation: scrollOnce 8s ease-in-out infinite alternate;
   }
 }
 
-/* Desktop (md and up) - Normal speed (8s) */
+/* Desktop (md and up) - Normal speed (10s) */
 @media (min-width: 768px) {
   .animate-scroll-desktop {
-    animation: scrollContinuous 8s linear infinite;
+    animation: scrollOnce 10s ease-in-out infinite alternate;
   }
 }
 
@@ -36,56 +36,11 @@
   animation-play-state: paused;
 }
 
-/* Alternative: Animation with pause (if you prefer the pause effect) */
-@keyframes scrollWithPause {
-  0% {
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(-50%);
-  }
-  85% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile with pause - Very fast (3s) */
-.animate-scroll-mobile-pause {
-  animation: scrollWithPause 3s linear infinite;
-}
-
-/* Tablet with pause - Medium fast (5s) */
-@media (min-width: 640px) {
-  .animate-scroll-tablet-pause {
-    animation: scrollWithPause 5s linear infinite;
-  }
-}
-
-/* Desktop with pause - Normal (8s) */
-@media (min-width: 768px) {
-  .animate-scroll-desktop-pause {
-    animation: scrollWithPause 8s linear infinite;
-  }
-}
-
-/* Extra responsive options for very small screens */
-@media (max-width: 480px) {
-  .animate-scroll-mobile {
-    animation: scrollContinuous 3s linear infinite;
-  }
-}
-
 /* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-scroll-mobile,
   .animate-scroll-tablet,
-  .animate-scroll-desktop,
-  .animate-scroll-mobile-pause,
-  .animate-scroll-tablet-pause,
-  .animate-scroll-desktop-pause {
-    animation-duration: 20s;
+  .animate-scroll-desktop {
+    animation: none;
   }
 }
