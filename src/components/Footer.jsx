@@ -27,14 +27,14 @@ const Footer = ({ isDarkMode }) => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-16 h-16 border-2 ${
+              className={`w-14 h-14 border-2 ${
                 isDarkMode ? 'border-white' : 'border-gray-800'
               } rounded-full flex items-center justify-center ${
                 isDarkMode ? 'text-white' : 'text-gray-800'
               } hover:bg-blue-700 hover:text-white hover:scale-125 transition-all duration-300 text-xl`}
             >
               {social.icon.endsWith('.png') || social.icon.endsWith('.jpg') || social.icon.endsWith('.svg') ? (
-                <img src={social.icon} alt="icon" className="w-11 h-11" />
+                <img src={social.icon} alt="icon" className="w-10 h-10" />
               ) : (
                 social.icon
               )}
