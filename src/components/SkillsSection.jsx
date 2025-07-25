@@ -40,7 +40,20 @@ const SkillsSection = ({ isDarkMode }) => {
             </div>
           ))}
           
-         
+          {/* Second set of skills for seamless loop */}
+          {skills.map((skill, index) => (
+            <div
+              key={`second-${index}`}
+              className={`flex-shrink-0 flex items-center ${cardBgClasses} p-4 md:p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 min-w-[200px] sm:min-w-[250px] md:min-w-[300px]`}
+            >
+              <img 
+                src={skill.image} 
+                alt={skill.name}
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mr-3 md:mr-5"
+              />
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
